@@ -4,6 +4,7 @@ https://github.com/twtrubiks/django-tutorial
 ````
 ---
 ##2.url path
+
 #####從settung.py中的TEMPLATES 修改 DIR
 ````
 TEMPLATES = [
@@ -25,6 +26,7 @@ TEMPLATES = [
 ---
 
 ##3.APP
+
 #####從setting加入你的app名稱
 ````
 INSTALLED_APPS = [
