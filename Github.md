@@ -31,4 +31,7 @@ git push -u origin master
 #git checkout master
 #git branch -u origin/master
 #若兩邊已有的檔案中，遠端與當地的內容不同則須先pull再push
+git pull
+DonLiao1207
+xl3qi6j04njo4
 ```
