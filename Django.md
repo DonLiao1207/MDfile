@@ -1,11 +1,11 @@
-##1.Install
+## 1.Install
 ````
 https://github.com/twtrubiks/django-tutorial
 ````
 ---
-##2.url path
+## 2.url path
 
-#####從settung.py中的TEMPLATES 修改 DIR
+##### 從settung.py中的TEMPLATES 修改 DIR
 ````
 TEMPLATES = [
     {
@@ -25,9 +25,9 @@ TEMPLATES = [
 ````
 ---
 
-##3.APP
+## 3.APP
 
-#####從setting加入你的app名稱
+##### 從setting加入你的app名稱
 ````
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,3 +40,17 @@ INSTALLED_APPS = [
 ]
 ````
 ---
+## 4.urls.py更改網址，對應到views.py
+
+## 5.修改default page
+```
+https://www.youtube.com/watch?v=zf3VWSbKXMg
+```
+## 6.連結到sql
+```
+#1.更改setting.py內的database
+#2.使用物件方式呼叫，不會被sql injection
+
+http://yltang.net/tutorial/django/7/
+https://medium.com/agatha-codes/painless-postgresql-django-d4f03364989
+```

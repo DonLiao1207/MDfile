@@ -1,6 +1,6 @@
-##ELK視覺化
+## ELK視覺化
 
-#####1.Kibana mapping
+##### 1.Kibana mapping
 ```
 1.1.進入Kibana Console
 1.2.先定義所需屬性
@@ -34,7 +34,7 @@ POST orisol/_doc
   "voltage": 757
 }
 ```
-#####2.建立index pattern
+##### 2.建立index pattern
 ```
 2.1 左側選單選擇Management
 2.2 Kibana->index pattern->create index pattern
@@ -43,7 +43,7 @@ POST orisol/_doc
 2.5 Create
 ```
 
-#####3.儲存你的Dicover
+##### 3.儲存你的Dicover
 ```
 3.1 左側選單選擇Discover
 3.2 選擇你Create的index pattern
@@ -51,7 +51,7 @@ POST orisol/_doc
 3.4 存檔
 ```
 
-#####4.視覺化
+##### 4.視覺化
 ```
 4.1 選擇你要的圖形Create new visualization
 4.2 選擇你儲存的Discover

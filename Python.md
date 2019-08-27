@@ -1,5 +1,5 @@
-##Thrift
-#####Tresult
+## Thrift
+#####  Tresult
 ```
 try:
       num_rows = 1000
@@ -17,7 +17,7 @@ results = 掃到幾行row key (0,9001)-> result=2
 
 ```
 
-#####使用thrift2的timerange從python取得hbase data，
+#####  使用thrift2的timerange從python取得hbase data，
 ```
 1.happybase底層是使用thrift的api，不支援timerange
 2.thrift2支援,但是thrift compiler0.10.0以後版本才支持python3+
@@ -36,7 +36,7 @@ scanner_id = cl.openScanner(
 ```
 
 
-##Apache Arrow 筆記
+## Apache Arrow 筆記
 ```
 1.有提供parquet，hdfs,csv,featerfomat
 2.shared_ptr[InputStream] stream
@@ -46,27 +46,27 @@ scanner_id = cl.openScanner(
 
 原文網址：https://kknews.cc/zh-tw/tech/r9kxzxr.html
 ```
-##Python基本套件
+## Python基本套件
 
-#####1.Anaconda 版本為 4.6.7
+##### 1.Anaconda 版本為 4.6.7
 
-#####2.Create AI python env
+##### 2.Create AI python env
 ```
 conda create -n AI python=3.6
 conda activate AI
 ```
 
-#####3.Tensorflow-1.12.0(內含numpy-1.16.0, pandas-0.23.4)
+##### 3.Tensorflow-1.12.0(內含numpy-1.16.0, pandas-0.23.4)
 ```
 conda install -c conda-forge tensorflow==1.12.0
 ```
 
-#####4.Pyarrow-0.11.1
+##### 4.Pyarrow-0.11.1
 ```
 conda install -c conda-forge pyarrow
 ```
 
-#####5.Keras-2.2.4
+##### 5.Keras-2.2.4
 ```
 conda install keras==2.2.4
 ```

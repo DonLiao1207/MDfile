@@ -1,5 +1,4 @@
-##Docker無法安裝
-
+## Docker無法安裝
 #####修改respository
 ```
 sudo add-apt-repository \
@@ -8,7 +7,7 @@ sudo add-apt-repository \
    stable"
 ```
 
-##Docker 常用指令
+##  Docker 常用指令
 ```
 #查看目前存活的cotainer
 docker ps -a
@@ -22,8 +21,7 @@ docker rm -f container_id
 #刪除image
 docker rmi -f image_id
 ```
-##安装portainer
-
+## 安装portainer
 #####執行portainer
 ```
 docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer

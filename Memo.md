@@ -1,29 +1,29 @@
-##DGX Station ip
+## DGX Station ip
 ```
 ssh don@172.23.172.247;Az9527
 ```
 
-##lab Station
+## lab Station
 ```
 ssh don@172.23.165.78;Az9527
 ```
-##檢查514port使用情況
+## 檢查514port使用情況
 ```
 lsof -i :514
 ```
 
-##map 514 port map logfile
+## map 514 port map logfile
 ```
 sudo docker run -ti -d -p 514:514/udp -v /home/don/workspace/WannaCry/:/workpace don:1.0 /bin/bash
 docker exec -ti ***id /bin/bash
 ```
 
-##build dockerfile use host network
+## build dockerfile use host network
 ```
 sudo docker build --network=host -t='don:1.0' .
 ```
 
-##pycharm docker
+## pycharm docker
 ```
 xhost +
 docker run --rm \
@@ -38,14 +38,14 @@ docker run --rm \
   pycharm:latest
 ```
 
-##Linux
+## Linux
 
-#####wc file 計算檔案的列數、字數、及位元數。
+##### wc file 計算檔案的列數、字數、及位元數。
 ```
 cat filename| head -n 3000 | tail -n +1000 顯示1000行到3000行
 
 ```
-#####echo 檔案內容利用nc以udp傳入elk.pouchen.com port5146
+##### echo 檔案內容利用nc以udp傳入elk.pouchen.com port5146
 ```
 echo '' > /var/log/rsyslog/172.23.174.9/LOGSTASH.log
 echo "***text***" | nc -v -u elk.pouchen.com 516
@@ -61,33 +61,33 @@ done
 
 ```
 
-#####scp用法
+##### scp用法
 ```
 scp sysadmin@172.16.5.231:/var/log/syslog-ng/172.16.5.9/2019_02_14.txt /home/don/Downloads/2019_02_14.txt
 scp WannaCry/ don@172.23.165.78:/home/don/workspace
 ```
 
-#####udpsvd
+##### udpsvd
 ```
 cat syslog UDP 514 port
 sudo udpsvd 0.0.0.0 514 cat
 ```
-#####tee
+##### tee
 ```
 #tee命令相當於把stdout副本寫入檔案，再把stdout傳給下一個命令，但是錯誤內容是無法用tee傳遞的，如同使用>>追加內容,tee可以使用-a選項追加：
 複製程式碼 程式碼如下:
 sudo udpsvd 0.0.0.0 514 tee /home/don/t2.log
 ```
-#####程序記憶體使用排序
+##### 程序記憶體使用排序
 ```
 ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
 ```
 
-#####程序CPU使用排序
+##### 程序CPU使用排序
 ```
 top -b -o +%CPU | head -n 17
 ```
-##Docker 常用指令
+## Docker 常用指令
 ```
 #查看目前存活的cotainer
 docker ps -a
@@ -102,14 +102,14 @@ docker rm -f container_id
 docker rmi -f image_id
 ```
 
-##Wanna Cry的Attack，log會有此關鍵字
+## Wanna Cry的Attack，log會有此關鍵字
 ```
 [MS.SMB.Server.Trans.Peeking.Data.Information.Disclosure」、「Backdoor.DoublePulsar」。
 ```
 
 
-##Thrift
-#####Tresult
+## Thrift
+##### Tresult
 ```
 try:
       num_rows = 1000
@@ -127,7 +127,7 @@ results = 掃到幾行row key (0,9001)-> result=2
 
 ```
 
-#####使用thrift2的timerange從python取得hbase data，
+##### 使用thrift2的timerange從python取得hbase data，
 ```
 1.happybase底層是使用thrift的api，不支援timerange
 2.thrift2支援,但是thrift compiler0.10.0以後版本才支持python3+
@@ -146,7 +146,7 @@ scanner_id = cl.openScanner(
 ```
 
 
-##Apache Arrow 筆記
+## Apache Arrow 筆記
 ```
 1.有提供parquet，hdfs,csv,featerfomat
 2.shared_ptr[InputStream] stream
@@ -158,8 +158,8 @@ scanner_id = cl.openScanner(
 ```
 
 
-##docker安裝
-#####修改respository
+## docker安裝
+##### 修改respository
 ```
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/debian \
@@ -167,7 +167,7 @@ sudo add-apt-repository \
    stable"
 ```
 
-##thunderbird郵件過濾檔案
+## thunderbird郵件過濾檔案
 ```
 msgFilterRules.dat
 ```
