@@ -26,7 +26,7 @@ git remote add origin 網址
 ```  
 ##### 7.push 到遠端完成上傳
 ```
-git push -u origin master
+git push -u origin master (-f)
 #git push origin master
 #git checkout master
 #git branch -u origin/master
@@ -34,4 +34,15 @@ git push -u origin master
 git pull
 DonLiao1207
 xl3qi6j04njo4
+```
+##### 8.修改檔案後更新到github
+```
+#1. 查看不同
+git diff
+#2. 新增修改
+git add .
+#3. 確認修改
+git commit
+#4. 上傳修改（推上）
+git push -u origin master 
 ```
