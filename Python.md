@@ -71,7 +71,7 @@ conda install -c conda-forge pyarrow
 conda install keras==2.2.4
 ```
 
-####6.thrift0.11.0
+##### 6.thrift0.11.0
 ```
 conda install -c anaconda thrift==0.11.0
     **6.1 下載hbase檔案
