@@ -20,6 +20,37 @@ docker rm -f container_id
 
 #刪除image
 docker rmi -f image_id
+
+#啟動container
+docker start (container name)
+
+```
+
+## Docker run 指令
+```
+#mount local folder as volumes
+-v host path:container path
+
+#bind port/tcp
+-p host port:container port/tcp
+
+#bind port/udp
+-p host port:container port/udp
+
+#assign pid
+--pid
+
+#give name
+--name
+
+#detach mode
+-d
+
+#memory size
+-m
+
+#cmd
+-it
 ```
 ## 安装portainer
 ##### 執行portainer
