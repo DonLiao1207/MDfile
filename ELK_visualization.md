@@ -76,4 +76,16 @@ monitor
 read
 read_cross_cluster
 
+#資料範圍授權，限定白金板使用
+grant privileges
+{
+        "range" : {
+            "temp" : {
+                "gte" : 10,
+                "lte" : 50,
+                "boost" : 2.0
+            }
+        }
+}
 ```
+
