@@ -48,3 +48,23 @@ find ~/.thunderbird/ -name msgFilterRules.dat
 ```
 /usr/bin/google-chrome-stable --no-sandbox
 ```
+##### x11vnc 安裝後啟動（遠端軟體） 
+#####  增加使用者
+```
+sudo adduser don sudo 
+```
+#####ffmpeg
+```
+#以fps=5的速度輸出影片為圖片
+ffmpeg -i 01.mp4 -vf fps=5 out%d.png
+
+#
+
+```
+
+#####webcam即時轉成picture
+```
+#1.webcam找到rtsp的資訊
+#2.fmpeg -i rtsp://admin:1234@172.23.160.44/ipcam_h264.sdp -vf fps=1 out%d.png
+#guvcview
+```
