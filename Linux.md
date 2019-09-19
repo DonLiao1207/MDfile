@@ -68,3 +68,9 @@ ffmpeg -i 01.mp4 -vf fps=5 out%d.png
 #2.fmpeg -i rtsp://admin:1234@172.23.160.44/ipcam_h264.sdp -vf fps=1 out%d.png
 #guvcview
 ```
+
+##### Linux big5 to utf-8
+```
+find . -type f -name '*.m' -print -exec iconv -f big5 -t utf-8 {} -o {} \;
+
+```
