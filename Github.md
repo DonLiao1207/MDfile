@@ -46,3 +46,14 @@ git commit
 #4. 上傳修改（推上）
 git push -u origin master 
 ```
+##### Git repo取得信任
+```
+git config credential.helper store
+$ git push https://github.com/owner/repo.git
+
+Username for 'https://github.com': <USERNAME>
+Password for 'https://USERNAME@github.com': <PASSWORD>
+
+#設定timeout
+git config --global credential.helper 'cache --timeout 7200'
+```
