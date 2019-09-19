@@ -1,12 +1,17 @@
 ## PHM Lesson
-#####1.Step1_Data_Preprocessing
-#####2.Step2_Feature_Extration
-#####3.Step3_Feature_Selection
-#####4.Step4_Train_LR_Model
-#####5.Step5_Train_SVM_Model2
-#####6.Step6_Data_Visualization
+##### 1.Step1_Data_Preprocessing
 
-#####Day2 Case1
+##### 2.Step2_Feature_Extration
+
+##### 3.Step3_Feature_Selection
+
+##### 4.Step4_Train_LR_Model
+
+##### 5.Step5_Train_SVM_Model2
+
+##### 6.Step6_Data_Visualization
+
+##### Day2 Case1
 ```
 1.費雪分數越大表示越能分開兩特徵
 2.normalization(zscore, 除n非n-1)
@@ -23,7 +28,7 @@
 #生產出相同品質產品，經過大保養後回覆最高品質（用pca檢驗），label值可以區分
 
 ```
-#####Day4 Case2
+##### Day4 Case2
 ```
 #x, y 三軸加速規
 #資料疊合必需要做
