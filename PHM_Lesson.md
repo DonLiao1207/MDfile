@@ -46,3 +46,27 @@
 #Classification and Fault map -SOM
 #Risk radar
 ```
+##### Day5 Case3
+```
+#FCFT fix cycle 根據機器做動的一個標準循環
+#5000? all answer?
+#如果看不出來載波
+#一開始圖要有跡象
+#如果多個faulty資訊的費雪分數如何處理→選解釋力強的case
+#SVM一次無法分很多類(mulitclasses)只能一層一層分
+#PCA只能告訴你其他分類與baseline有統計上的顯著差異
+#可以分出幾類狀態後再回推
+#ROC curve 分出底下面積為正確率
+#T2 and SPE根據pca算出
+#閥值取法？有公式，確認問題可以接受的誤報率
+```
+
+
+##### Day6 PCA
+```
+#T^2 and SPE(累積error值)
+#Prognosability study of ball screw degradation systematic
+#bathub curve
+#FIR BandPass Filter
+#envlope filter包絡線，希爾波特濾波器
+```
