@@ -31,3 +31,81 @@ ALTER TABLE oven."data" DROP COLUMN amp;
 ALTER TABLE oven."data" DROP COLUMN ti;
 ALTER TABLE oven."data" DROP COLUMN hdt;
 ```
+
+#####PostgreSql row-level security
+```
+-- 權限組定義
+CREATE TABLE groups (group_id int PRIMARY KEY,
+                     group_name text NOT NULL);
+
+INSERT INTO groups VALUES
+  (1, 'low'),
+  (2, 'medium'),
+  (5, 'high');
+
+GRANT ALL ON groups TO alice; -- alice is the administrator
+GRANT SELECT ON groups TO public;
+
+-- 用戶的權限級別定義
+CREATE TABLE users (user_name text PRIMARY KEY,
+                    group_id int NOT NULL REFERENCES groups);
+
+INSERT INTO users VALUES
+  ('alice', 5),
+  ('bob', 2),
+  ('mallory', 2);
+
+GRANT ALL ON users TO alice;
+GRANT SELECT ON users TO public;
+
+-- 保持受保護信息的表
+CREATE TABLE information (info text,
+                          group_id int NOT NULL REFERENCES groups);
+
+INSERT INTO information VALUES
+  ('barely secret', 1),
+  ('slightly secret', 2),
+  ('very secret', 5);
+
+ALTER TABLE information ENABLE ROW LEVEL SECURITY;
+
+-- 行對於安全group_id大於或者等於行的group_id的用戶是可見的/可更新的
+CREATE POLICY fp_s ON information FOR SELECT
+  USING (group_id <= (SELECT group_id FROM users WHERE user_name = current_user));
+CREATE POLICY fp_u ON information FOR UPDATE
+  USING (group_id <= (SELECT group_id FROM users WHERE user_name = current_user));
+
+-- 我們只依賴RLS保護信息表
+GRANT ALL ON information TO public;
+```
+
+```
+"SELECT concat(gateway_id, lpad(ns_id::text, 3, '0')) as row_id, node_id, name "+
+"FROM sensor_bk "+
+"WHERE gateway_id = "+
+"(SELECT id "+
+"FROM gateway "+
+"WHERE ai_tag is not null) "
+```
+
+```
+#!/bin/bash
+
+let x=0
+
+for i in {1..5};
+do
+    sh /home/don/PHM_Learning/Orisol/dev_B0KI_Oven_0.1/dev_B0KI_Oven/dev_B0KI_Oven_run.sh
+    sleep 10s
+    let x=x+1
+    echo $x
+    if [ $x -eq 5 ]
+    then
+      matlab -nodisplay -nosplash -nodesktop -r "run('/home/don/PHM_Learning/Orisol/Matlab_Code/Matlab_Inference/Inference.m'); exit;"
+    else
+      :
+    fi
+
+done
+
+```

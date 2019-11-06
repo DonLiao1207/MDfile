@@ -64,3 +64,15 @@ tls_client_ca =
 ; This might be required if the OAuth provider is not RFC6749 compliant, only supporting credentials passed via POST payload
 send_client_credentials_via_post = false
 ```
+
+##### Grafana
+```
+# The ip address to bind to, empty will bind to all interfaces
+http_addr = 172.23.181.193
+
+# The http port  to use
+http_port = 3000
+
+# The public facing domain name used to access grafana from a browser
+domain = 172.23.181.193
+```

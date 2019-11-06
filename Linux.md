@@ -74,3 +74,21 @@ ffmpeg -i 01.mp4 -vf fps=5 out%d.png
 find . -type f -name '*.m' -print -exec iconv -f big5 -t utf-8 {} -o {} \;
 
 ```
+
+##### Linux  firewall
+```
+ufw stop...
+```
+
+##### Linux 對時
+```
+sudo ntpdate time.stdtime.gov.tw
+sudo date -s "2019-11-01 10:06:00"
+```
+
+##### Linux check port
+```
+sudo lsof -i -P -n
+#確認python 版本
+sudo update-alternatives --config python3
+```
