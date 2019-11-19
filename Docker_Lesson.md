@@ -1,23 +1,37 @@
 ## Docker 課程實作
+##### before
+```
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+newgrp docker
+sudo gpasswd -d user group
+```
 ##### 1. pull image
 ```
+docker pull python:3.6
+docker pull tensorflow/tensorflow:1.15.0-py3-jupyter
+sudo docker run -id -p 8888:8888 --name dontensor tensorflow/tensorflow:nightly-py3-jupyter
+docker run 
 docker pull ubuntu
 https://hub.docker.com
 docker pull ubuntu
-docker pull ubuntu:latest
-docker pull ubuntu:xenial-20191024
+docker pull ubuntu:18.04
 docker images
 ```
 ##### 2. docker run
 ```
 docker ps -a
-docker run  ubuntu:latest
+docker run  ubuntu:18.04
 docker ps -a
 docker run --name don_ubuntu ubuntu
 docker ps -a
 docker rm 
-docker run -idt --name test ubuntu:latest
+docker run -idt --name test ubuntu:18.04
 docker exec -it test /bin/bash
+apt update
+apt install -y software-properties-common
+add-apt-repository ppa:jonathonf/python-3.6
+apt update
 apt install vi
 apt install python3.6
 ```
@@ -54,4 +68,31 @@ docker rmi image id
 ```
 docker pull nginx
 docker run --name nginx-hello -p 8080:80 nginx 
+```
+
+##### 8.dockerfile
+```
+# build ubuntu and python3.6 dockerfile
+# docker build -t ubuntu1604py36
+FROM ubuntu:18.04
+
+RUN apt-get update && \
+  apt-get install -y software-properties-common && \
+  add-apt-repository ppa:jonathonf/python-3.6
+  
+RUN apt-get update
+
+RUN apt-get install -y build-essential python3.6 python3.6-dev python3-pip python3.6-venv && \
+	apt-get install -y git
+
+# update pip
+RUN python3.6 -m pip install pip --upgrade
+RUN python3.6 -m pip install wheel
+
+```
+
+##### 9.docker-compose
+```
+apt install docker-compose
+
 ```

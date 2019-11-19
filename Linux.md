@@ -91,4 +91,16 @@ sudo date -s "2019-11-01 10:06:00"
 sudo lsof -i -P -n
 #確認python 版本
 sudo update-alternatives --config python3
+x11vnc -display :0 -auth /var/run/lightdm/root/:0 -forever -bg -o /var/log/x11vnc.log -rfbauth /etc/x11vnc.pass -rfbport 5900
+
+end script
+
+```
+
+##### Http server web folder
+```
+1.curl -sL https://vnt87.github.io/nodemx/nodesetupmx_12.x | sudo bash -
+2.sudo apt-get install -y nodejs
+3.sudo npm install http-server-with-auth -g
+4.http-server-with-auth --username pcg --password pcg [path]
 ```

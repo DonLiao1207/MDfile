@@ -87,7 +87,18 @@ GRANT ALL ON information TO public;
 "FROM gateway "+
 "WHERE ai_tag is not null) "
 ```
-
+```
+89	【L1】0000528331	100	12
+90	【L2】0000522107	100	12
+91	【L3】0000170266	100	12
+92	【L4】88706060310	100	12
+93	【L5】0000150974	100	12
+94	【L6】0000094147	100	12
+95	【L7】0000163101	100	12
+96	【L8】88290060173	100	12
+97	【L9】0000522618	100	12
+98	【L10】0000516045	100	12
+```
 ```
 #!/bin/bash
 
@@ -106,6 +117,26 @@ do
       :
     fi
 
-done
+donedevice check 有更新才有值
 
 ```
+```
+"SELECT concat(gateway_id, lpad(ns_id::text, 2, '0')) as row_id, node_id, name  "+
+"FROM sensor_bk "+
+"WHERE  id = 2 AND gateway_id = 2 
+OR  id = 9 AND gateway_id = 2 
+OR  id = 12 AND gateway_id = 2 
+OR  id = 15 AND gateway_id = 2 
+OR  id = 3 AND gateway_id = 2"
+
+"SELECT concat(gateway_id, lpad(ns_id::text, 3, '0')) as row_id, node_id, name  "+
+"FROM sensor_bk "+
+"WHERE  id = 2 AND gateway_id = 2"+
+"OR  id = 9 AND gateway_id = 2"+
+"OR  id = 12 AND gateway_id = 2"+
+"OR  id = 15 AND gateway_id = 2"+
+"OR  id = 3 AND gateway_id = 2"
+25004:6011:O4-Power<>25004:6014:O4-Voltage<>25004:6017:O4-Current<>25004:6004:O4-Temp-a<>25004:6005:O4-Temp-b
+
+```
+

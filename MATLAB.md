@@ -21,7 +21,7 @@ str "" 用 ["A"+"B"+....]
 str '' 用 ['A','B',....]
 ```
 
-##### MATLAB Runtime
+##### MATLAB Runtime    
 ```
 ./run.sh ./run_Inference.sh /usr/local/MATLAB/R2019a/
 (MCRdir)
@@ -30,4 +30,11 @@ str '' 用 ['A','B',....]
 #####  Linux run m file
 ```
 matlab -nodesktop -nosplash -r 
+```
+
+##### MATLAB UDP toolbox
+```
+Simulink.
+Instrument Control Toolbox. 
+/home/don/PHM_Learning/Orisol/Matlab_Code/Matlab_Inference/Inference/for_redistribution_files_only/run_Inference.sh /usr/local/MATLAB/MATLAB_Runtime/v96/
 ```
