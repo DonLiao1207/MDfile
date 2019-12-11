@@ -76,3 +76,15 @@ http_port = 3000
 # The public facing domain name used to access grafana from a browser
 domain = 172.23.181.193
 ```
+
+##### html
+```
+[panels]
+# If set to true Grafana will allow script tags in text panels. Not recommended as it enable XSS vulnerabilities.
+disable_sanitize_html = true
+
+Netdata auto fresh
+NETDATA.options.current.stop_updates_when_focus_is_lost = false;
+
+
+```

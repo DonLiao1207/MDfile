@@ -104,3 +104,14 @@ end script
 3.sudo npm install http-server-with-auth -g
 4.http-server-with-auth --username pcg --password pcg [path]
 ```
+
+##### truncate
+```
+#設定檔案為此大小（清空檔案）
+truncate -s 0 out.csv
+```
+##### awk
+```
+#指定輸出行＋指定輸出欄
+free --mega  | awk 'FNR == 2' | awk '{print $2 "\t" $4}'
+```

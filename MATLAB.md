@@ -13,7 +13,22 @@ insert_str= ['INSERT INTO oven.inference (id, t2limit, spelimit, t2, spe, cv, ru
 
 
 ```
-
+##### matrix condition replace
+```
+each_start = (count-1)*freq+1;
+each_end = count*freq;
+    
+sub_v = vtg_health(each_start:each_end,1);
+sub_c = cur_health(each_start:each_end,1);
+    
+sub_v(sub_v > vtglimit(count,1)) = vtglimit(count,1);
+sub_c(sub_c > curlimit(count,1)) = curlimit(count,1);
+sub_v(sub_v < vtglimit(count,2)) = vtglimit(count,2);
+sub_c(sub_c < curlimit(count,2)) = curlimit(count,2);
+        
+vtg_health(each_start:each_end,1) = sub_v;
+cur_health(each_start:each_end,1) = sub_c;
+```
 ##### quotes
 
 ```

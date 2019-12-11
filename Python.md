@@ -87,4 +87,17 @@ conda install -c anaconda thrift==0.11.0
 ```
 
 
+##### JSON parse
+```
+def answer_user(ans):
+    ans_list = []
+    score_list = []
+    l = len(ans['answers'])
+    for i in range(0,l-1):
+        a = ans['answers'][i]['answer']
+        a_score = str(ans['answers'][i]['score'])
+        ans_list.append(a)
+        score_list.append(a_score)
 
+    return ans_list, score_list, l
+```
