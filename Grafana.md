@@ -88,3 +88,37 @@ NETDATA.options.current.stop_updates_when_focus_is_lost = false;
 
 
 ```
+
+##### strcture
+```
+.
+├── Makefile
+├── docker-compose.yml          # docker-compose file that
+│                               # aggregates `prometheus`,
+│                               # `node_exporter` and `grafana`.
+│ 
+├── grafana                     # Grafana config
+│   ├── Dockerfile              # Dockerfile that adds config to the image
+│   ├── config.ini              # Base configuration
+│   ├── dashboards              # Pre-made dashboards
+│   │   └── mydashboard.json    # Sample dashboard
+│   └── provisioning            # Configuration for automatic provisioning at
+│       │                       # grafana startup.
+│       ├── dashboards          
+│       │   └── all.yml         # Configuration about grafana dashboard provisioning
+│       └── datasources
+│           └── all.yml         # Configuration about grafana data sources provisioning
+│ 
+└── prometheus                  # Prometheus config
+    ├── Dockerfile
+    └── config.yml
+```
+
+##### html panel
+```
+[panels]   
+│# If set to true Grafana will allow script tags in text panels. Not recommended as i$
+disable_sanitize_html = true   
+
+```
+                                                                          

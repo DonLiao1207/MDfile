@@ -16,6 +16,10 @@ bash read.sh | nc -v -u 172.23.181.193 516
 ```
 scp sysadmin@172.16.5.231:/var/log/syslog-ng/172.16.5.9/2019_02_14.txt /home/don/Downloads/2019_02_14.txt
 scp WannaCry/ don@172.23.165.78:/home/don/workspace
+
+#若ssh密碼正確確無法使用->進入伺服器端
+#清空錯誤登入紀錄
+faillog -r
 ```
 
 ##### udpsvd

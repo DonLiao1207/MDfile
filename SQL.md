@@ -140,3 +140,8 @@ OR  id = 3 AND gateway_id = 2"
 
 ```
 
+##### timezone
+```
+#timestamp has no zone
+#choose timestampz
+```

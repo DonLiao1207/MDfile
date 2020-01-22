@@ -140,3 +140,10 @@ mount test
 ```
 
 ```
+##### 4.Docker-compose
+```
+#create network 
+driver:bridge
+subnet:192.168.199.0/24
+gateway:192.168.199.1
+```

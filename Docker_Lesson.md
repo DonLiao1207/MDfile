@@ -50,13 +50,17 @@ docker cp 8ba143885be3:/test.py /home/don/Desktop/test_cp.py
 ```
 docker commit -m '2019-11-05' 8ba143885be3 don/test:1.0
 ```
-##### 5. docker export and import
-
+##### 5. docker export-import / save-load
 ```
+#export/import
 docker export -o test.tar test
 ls -al test.tar
 docker import test.tar test:1.01
 docker import link
+
+#save/load
+docker save -o test.tar test:01
+docker load -i test.tar
 ```
 
 ##### 6. docker rm
