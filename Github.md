@@ -33,7 +33,7 @@ git push -u origin master (-f)
 #若兩邊已有的檔案中，遠端與當地的內容不同則須先pull再push
 git pull
 DonLiao1207
-xl3qi6j04njo4
+
 ```
 ##### 8.修改檔案後更新到github
 ```
@@ -52,7 +52,7 @@ git config credential.helper store
 $ git push https://github.com/owner/repo.git
 
 Username for 'https://github.com': <USERNAME>
-Password for 'https://USERNAME@github.com': <PASSWORD>
+Token for 'https://USERNAME@github.com': <Token>
 
 #設定timeout
 git config --global credential.helper 'cache --timeout 7200'
